@@ -1,0 +1,188 @@
+@import "../../themes/mixin.scss";
+
+.createQuizCon {
+  form {
+    @include neonBorder;
+    padding: 10px 0 10px 0;
+    h1 {
+      @include heading;
+      font-size: 22px;
+    }
+    .quizNameInput {
+      label {
+        font-size: 20px;
+      }
+      input {
+        @include inputBorder;
+        height: 40px;
+      }
+      button {
+        @include submitButton;
+        animation: none;
+        opacity: 1;
+        height: 40px;
+        font-size: 20px;
+      }
+      .nextBtn {
+        opacity: 0.5 !important;
+      }
+    }
+    div {
+      div {
+        label {
+          font-size: 20px;
+          margin-top: 15px;
+        }
+        textarea {
+          @include inputBorder;
+          height: auto;
+          text-align: left;
+          transition: all 0.2s;
+          padding: 5px 15px 5px 15px;
+          resize: none;
+        }
+        input {
+          @include inputBorder;
+          height: 40px;
+        }
+
+       
+      }
+      .questionImageContainer {
+        height: 250px;
+        .questionImageContainerSub {
+          @include inputBorder;
+          height: 100%;
+          img {
+            width: 250px;
+            height: auto;
+          }
+         
+            .rhap_container {
+              @include neonBorder;
+              padding: 15px 20px 15px 20px;
+              margin-bottom: 10px;
+              width: 90%;
+              background-color: transparent;
+              .rhap_current-time, .rhap_total-time {
+                color: var(--white);
+                text-shadow: 0 0 3px var(--white), 2px 2px 2px rgba(206, 89, 55, 0);
+              }
+              .rhap_download-progress, .rhap_volume-bar {
+                background-color: var(--blue-light);
+              }
+              .rhap_progress-indicator, .rhap_volume-indicator {
+                background-color: var(--blue);
+                box-shadow: 0px 0px 4px 2px var(--blue), 0px 0px 8px 0px rgba(0, 191, 255, 0), inset 0px 0px 4px 2px var(--blue);
+              }
+              .rhap_progress-filled {
+                background-color: var(--blue);
+                box-shadow: 0px 0px 4px 2px var(--blue), 0px 0px 8px 0px rgba(0, 191, 255, 0), inset 0px 0px 4px 2px var(--blue);
+              }
+              svg {
+                path {
+        
+                  fill: var(--blue);
+                }
+              }
+            
+          }
+        }
+      }
+      .answerOption {
+        padding: 0 9% 0 9%;
+        div {
+          div {
+            width: 45%;
+            height: 40px;
+            label,
+            input {
+              width: 100%;
+              height: 100%;
+              pointer-events: none;
+              margin: 0 !important;
+              border: 4px solid var(--blue);
+              border-radius: 50px;
+              transition: all 0.3s;
+            }
+            input {
+              pointer-events: all;
+              border: none;
+              opacity: 0;
+            }
+            &:hover {
+              label {
+                background-color: var(--blue-light);
+              }
+            }
+            .activeInput {
+              @include neonShadow;
+              background-color: var(--blue) !important;
+              text-shadow: none;
+            }
+          }
+        }
+      }
+    }
+    .btnCon {
+      div:nth-child(1) {
+        border-top: 3px solid var(--blue);
+        button {
+          @include submitButton;
+          height: 40px;
+          margin-top: 0;
+          margin-bottom: 0;
+          animation: fadeInOpacity 0.6s 0.3s ease forwards;
+        }
+        .btnControl {
+          border: none;
+          button {
+            border: none !important;
+            opacity: 1;
+            transform: none;
+            animation: none;
+          }
+          .removeBtn,
+          .saveBtn {
+            width: 120px;
+            padding-bottom: 2px;
+          }
+        }
+        .controlBtnCon {
+          border-top: 3px solid var(--blue);
+          padding: 20px 8% 20px 8%;
+          .middleBtn {
+            width: 100px !important;
+          }
+          .lastBtn {
+            opacity: 0.5 !important;
+          }
+          button {
+            width: 150px;
+            overflow: hidden;
+          }
+          button:nth-child(1) {
+            margin-right: 15px;
+            border-top-left-radius: 100%;
+            border-bottom-left-radius: 100%;
+          }
+          button:nth-child(3) {
+            margin-left: 15px;
+            border-top-right-radius: 100%;
+            border-bottom-right-radius: 100%;
+          }
+        }
+      }
+    }
+    .saveBtn {
+      border-top: 3px solid var(--blue);
+      button {
+        @include submitButton;
+        animation: fadeInOpacity 0.6s 0.3s ease forwards;
+        height: 40px;
+        margin: 0;
+        padding-bottom: 2px;
+      }
+    }
+  }
+}

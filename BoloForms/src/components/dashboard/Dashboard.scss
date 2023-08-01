@@ -1,0 +1,87 @@
+@import "../themes/mixin.scss";
+.logoCon {
+  margin-top: 25px;
+  opacity: 0;
+  transform: translate(0, 10px);
+  animation: fadeInOpacity 0.5s 0s ease forwards;
+  img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+  }
+  h1 {
+    font-size: 23px;
+    font-weight: 700;
+    color: var(--blue);
+    text-shadow: 0 0 5px var(--blue), 2px 2px 2px rgb(206 89 55 / 0%);
+  }
+  .navBtnCon {
+    color: var(--blue);
+    button {
+      background-color: none;
+      transition: 0.3s all;
+      border-right: 8px solid transparent;
+      border-left: 8px solid transparent;
+      &:hover {
+        border-right: 8px solid var(--sky-blue);
+        border-left: 8px solid var(--sky-blue);
+      }
+    }
+  }
+}
+
+.subTitle {
+  opacity: 0;
+  transform: translate(0, 10px);
+  animation: fadeInOpacity 0.5s 0.2s ease forwards;
+  h1 {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    color: var(--gray);
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+    text-shadow: 0 0 1px var(--white), 2px 2px 2px rgb(206 89 55 / 0%);
+  }
+}
+
+.quizCon,
+.queCon,
+.leaderboard,
+.preBack {
+  @include neonBorder;
+}
+.quizCon {
+  p {
+    @include normalButton;
+  }
+  p:hover {
+    @include normalButtonHover;
+  }
+}
+.submitCon,
+.prevBtn,
+.nextBtn,
+.preBack button {
+  width: 150px;
+  height: 40px;
+  background: var(--blue);
+  border-radius: 25px;
+  font-size: 18px;
+  color: white;
+  margin-top: 35px;
+  margin-bottom: 50px;
+  box-shadow: 0px 0px 7px 2px var(--blue), 0px 0px 8px 0px rgb(0 191 255 / 0%);
+}
+.prevBtn,
+.nextBtn {
+  width: 100px;
+  height: 35px;
+  border-radius: 25px;
+  margin-top: 5px;
+  margin-bottom: 10px;
+  transition: 0.3s all;
+  &:hover {
+    background: var(--blue-dark);
+  }
+}

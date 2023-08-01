@@ -1,0 +1,202 @@
+@import ".././themes/mixin.scss";
+.qForm {
+  margin-top: 20px;
+}
+.queCon {
+  opacity: 0;
+  transform: translate(0, 50px);
+  animation: fadeIn 0.5s ease forwards;
+  -webkit-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  padding: 20px !important;
+}
+.submitCon {
+  opacity: 0;
+  transform: translate(0, 50px);
+  animation: fadeInHalfOpacity 0.5s 0.2s ease forwards;
+}
+.qCon {
+  width: 100% !important;
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 0.2s ease forwards;
+  h1 {
+    transition: all 0.5s;
+  }
+  img {
+    margin-top: 30px;
+    margin-bottom: 30px;
+    width: 300px;
+    height: auto;
+  }
+  .qConSub {
+    @include neonBorder;
+    min-height: 300px;
+    width: 100%;
+    padding: 20px;
+    .rhap_container {
+      @include neonBorder;
+      padding: 15px 20px 15px 20px;
+      margin-bottom: 10px;
+      margin-top: 10px;
+      width: 90%;
+      background-color: transparent;
+      .rhap_current-time, .rhap_total-time {
+        color: var(--white);
+        text-shadow: 0 0 3px var(--white), 2px 2px 2px rgba(206, 89, 55, 0);
+      }
+      .rhap_download-progress, .rhap_volume-bar {
+        background-color: var(--blue-light);
+      }
+      .rhap_progress-indicator, .rhap_volume-indicator {
+        background-color: var(--blue);
+        box-shadow: 0px 0px 4px 2px var(--blue), 0px 0px 8px 0px rgba(0, 191, 255, 0), inset 0px 0px 4px 2px var(--blue);
+      }
+      .rhap_progress-filled {
+        background-color: var(--blue);
+        box-shadow: 0px 0px 4px 2px var(--blue), 0px 0px 8px 0px rgba(0, 191, 255, 0), inset 0px 0px 4px 2px var(--blue);
+      }
+      svg {
+        path {
+
+          fill: var(--blue);
+        }
+      }
+      
+    }
+  }
+}
+.optionsRow1 div:nth-child(1) {
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 0.4s ease forwards;
+}
+.optionsRow1 div:nth-child(2) {
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 0.6s ease forwards;
+}
+.optionsRow2 div:nth-child(1) {
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 0.8s ease forwards;
+}
+.optionsRow2 div:nth-child(2) {
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 1s ease forwards;
+}
+.changeButton {
+  opacity: 0;
+  animation: fadeInOpacity 0.5s 1.2s ease forwards;
+}
+
+.options {
+  margin-top: 10px;
+}
+.radioBtnCon {
+  width: -webkit-fill-available;
+  color: var(--white);
+  border-radius: 25px;
+  background-color: var(--blue);
+  margin: 0 10px 20px 10px;
+  box-shadow: 0px 0px 7px 2px var(--blue), 0px 0px 8px 0px rgb(0 191 255 / 0%);
+  transition: all 0.3s;
+  label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    height: 100%;
+    word-wrap: break-word;
+    pointer-events: none;
+    overflow: hidden;
+  }
+  input {
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+  }
+}
+.radioBtnCon:hover {
+  transition: 0.3s !important;
+  background-color: var(--blue-dark);
+}
+.radioBtnSelected {
+  background-color: var(--green) !important;
+  box-shadow: 0px 0px 7px 2px var(--green), 0px 0px 8px 0px rgb(0 191 255 / 0%) !important;
+}
+
+.opacitySubmitBtn {
+  transform: translate(0, 0px);
+  animation: fade 0.3s ease forwards;
+  @keyframes fade {
+    0% {
+      opacity: 0.5;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+}
+.queTopCon {
+  margin: 5px 0px 5px 0px;
+  h1 {
+    box-shadow: 0px 0px 4px 2px #00b5ff, 0px 0px 8px 0px rgba(0, 191, 255, 0),
+      inset 0px 0px 4px 2px #00b5ff;
+    border: 2px solid var(--blue);
+    border-radius: 25px;
+    padding: 2px 10px 2px 10px;
+  }
+  h1:nth-child(1) {
+    margin-left: 10px;
+  }
+  h1:nth-child(2) {
+    margin-right: 10px;
+  }
+}
+
+.resultCon {
+  margin-top: 20px;
+  .result {
+    opacity: 0;
+    transform: translate(0, 10px);
+    animation: fadeInOpacity 0.5s 0s ease forwards;
+    border: 3px solid #00b5ff;
+    box-shadow: 0px 0px 4px 2px #00b5ff, 0px 0px 8px 0px rgb(0 191 255 / 0%),
+      inset 0px 0px 4px 2px #00b5ff;
+    width: 80%;
+    padding: 10px;
+    border-radius: 10px;
+    color: var(--gray);
+    text-shadow: 0 0 3px var(--white), 2px 2px 2px rgb(206 89 55 / 0%);
+    font-size: 18px;
+    overflow: hidden;
+    transition: all 0.2s;
+    .invalid {
+      text-shadow: 0 0 3px var(--red), 2px 2px 2px rgb(206 89 55 / 0%);
+    }
+  }
+}
+
+@media only screen and (max-width: 768px){
+  .qCon img {
+    width: 200px;
+  }
+  .qConSub  {
+    padding: 0 !important;
+  }
+  .radioBtnCon {
+    margin: 0 0px 20px 0px;
+  }
+  .rhap_container {
+    font-size: 10px !important;
+    width: 100% !important;
+    padding: 0 !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .rhap_progress-indicator, .rhap_volume-indicator {
+    transform: scale(0.5);
+  }
+  .rhap_main {
+    transform: scale(0.8);
+  }
+}

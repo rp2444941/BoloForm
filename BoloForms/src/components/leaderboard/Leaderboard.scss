@@ -1,0 +1,125 @@
+@import ".././themes/mixin.scss";
+.leaderboardCon {
+  margin-top: 25px;
+  margin-bottom: 35px;
+  .leaderboard {
+    h1 {
+      font-weight: 700;
+      text-shadow: 0 0 1px var(--white), 2px 2px 2px rgba(206, 89, 55, 0);
+      &:nth-child(1) {
+        border-bottom: 2px solid var(--blue);
+      }
+    }
+    .readMoreBtn, .copyEmailBtn {
+      @include submitButton;
+      animation: none;
+      opacity: 1;
+      margin: 0;
+      height: 30px;
+      font-size: 15px;
+      width: 150px;
+      margin-bottom: 15px;
+      margin-right: 5px;
+    }
+    .copyEmailBtn {
+      margin-right: 0px;
+      margin-left: 5px;
+    }
+    .copyEmail {
+      @include neonBorder;
+      width: 91.666667%;
+      input {
+        @include inputBorder;
+        height: 40px;
+        width: 200px;
+        margin-top: 10px;
+        margin-bottom: 19px;
+      }
+      button {
+        @include submitButton;
+        animation: none;
+        opacity: 1;
+        margin: 0;
+        height: 30px;
+        font-size: 15px;
+        width: 150px;
+        margin-bottom: 25px;
+      }
+    }
+    .editBtn {
+      position: absolute;
+      top: 10px;
+      right: 10px;
+      width: 30px;
+      height: 30px;
+      span {
+        position: absolute;
+        width: 0px;
+        height: 5px;
+        border-radius: 25px;
+        background-color: var(--blue);
+        box-shadow: 0px 0px 3px 0px var(--blue);
+        transform: rotate(0deg);
+        animation: rotateIn 0.5s ease 0.4s forwards;
+      }
+      span:nth-child(2) {
+        animation: rotateOut 0.5s ease 0.4s forwards;
+      }
+      @keyframes rotateIn {
+        0% {
+          width: 0px;
+          transform: rotate(0deg);
+        }
+        50% {
+          width: 30px;
+          transform: rotate(0deg);
+        }
+        100% {
+          width: 30px;
+          transform: rotate(45deg);
+        }
+      }
+      @keyframes rotateOut {
+        0% {
+          width: 0px;
+          transform: rotate(0deg);
+        }
+        50% {
+          width: 30px;
+          transform: rotate(0deg);
+        }
+        100% {
+          width: 30px;
+          transform: rotate(-45deg);
+        }
+      }
+    }
+    table, th, td {
+      border: 2px solid var(--blue);
+      border-collapse: collapse;
+      text-align: center;
+      img {
+        width: 20px;
+      }
+    }
+  }
+  .readMoreTd {
+    text-align: start !important;
+  }
+}
+
+@media only screen and (max-width: 768px){ 
+  .readMoreBtn, .copyEmailBtn {
+    margin-top: 20px !important;
+    font-size: 13px;
+    padding: 0px 5px 0 5px;
+    width: 100%;
+    transform: scale(0.8) !important;
+  }
+  .readMoreBtn {
+    margin-right: 1px;
+  }
+  .copyEmailBtn {
+    margin-left: 1px;
+  }
+}
